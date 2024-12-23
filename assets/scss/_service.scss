@@ -1,0 +1,240 @@
+//service
+.service-items {
+	padding: 60px;
+	border-radius: 20px;
+	background: $blogbox;
+	position: relative;
+	transition: all 0.4s;
+	.icon {
+		margin-bottom: 120px;
+		transition: all 0.5s;
+	}
+	.content {
+		p {
+			margin-bottom: 40px;
+		}
+		.common-btn {
+			border: 1px solid $p1-clr;
+			&:hover {
+				border-color: $p3-clr;
+			}
+		}
+	}
+	.badge {
+		position: absolute;
+		right: 6px;
+		top: 8px;
+		z-index: 1;
+	}
+	&:hover {
+		.common-btn {
+			border: 1px solid $p1-clr;
+			border-color: $p1-clr;
+			background: $p1-clr;
+			color: $white;
+		}
+		.icon {
+			transform: scale(0.9);
+		}
+	}
+	@include breakpoint(max-xxl) {
+		padding: 34px 30px;
+		.icon {
+			margin-bottom: 80px;
+			width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+		.badge {
+			right: 6px;
+			top: 8px;
+			max-width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include breakpoint(max-md) {
+		padding: 28px 20px;
+		.icon {
+			margin-bottom: 40px;
+			width: 80px;
+			img {
+				width: 100%;
+			}
+		}
+		.content {
+			p {
+				margin-bottom: 24px;
+			}
+		}
+		.badge {
+			right: 6px;
+			top: 8px;
+			max-width: 60px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+//service area2
+.service-areas {
+	.service-items {
+		padding: 40px 40px;
+		.icon {
+			margin-bottom: 40px;
+		}
+		@include breakpoint(max-xl) {
+			padding: 24px 20px;
+			.icon {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+.services-custom {
+	.service-items {
+		background: transparent;
+		&.active,
+		&:hover {
+			background: #ebf3f6;
+		}
+	}
+}
+
+//Service Details
+.service-detials-left {
+	display: grid;
+	gap: 40px;
+	.all-service-thumb {
+		border-radius: 20px;
+		position: relative;
+		img {
+			border-radius: 20px;
+		}
+	}
+	.all-service-thumb {
+		position: relative;
+		z-index: 1;
+		.help-text {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			gap: 18px;
+			bottom: 32px;
+			left: 32px;
+			.cont {
+				font-size: 25px;
+				font-weight: 500;
+				display: grid;
+				text-wrap: nowrap;
+				gap: 10px;
+				color: $white;
+				span {
+					font-size: 30px;
+					display: block;
+					font-weight: 500;
+					text-wrap: nowrap;
+					color: $white;
+				}
+			}
+		}
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			content: "";
+			border-radius: 20px;
+			opacity: 0.7;
+			background: linear-gradient(
+				180deg,
+				rgba(32, 109, 255, 0) 42.93%,
+				#134199 67.68%
+			);
+		}
+	}
+	@include breakpoint(max-xl) {
+		gap: 20px;
+		.all-service-thumb {
+			.help-text {
+				gap: 12px;
+				bottom: 24px;
+				left: 24px;
+				.icon {
+					width: 50px;
+				}
+				.cont {
+					font-size: 18px;
+					gap: 6px;
+					span {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+}
+.allservice-box {
+	border-radius: 20px;
+	border: 2px solid #ddd;
+	background: $white;
+	overflow: hidden;
+	.head {
+		padding: 28px 40px;
+		color: $white;
+		background: $p1-clr;
+	}
+	.all-service-list {
+		li {
+			a {
+				font-size: 20px;
+				font-weight: 500;
+				color: $black;
+				display: flex;
+				font-family: $sub-font;
+				justify-content: space-between;
+				align-items: center;
+				padding: 20px 30px;
+				transition: all 0.4s;
+				i {
+					color: $p2-clr;
+					transition: all 0.4s;
+				}
+				&:hover {
+					color: $p1-clr;
+					i {
+						margin-right: 10px;
+					}
+				}
+			}
+			&:not(:last-child) {
+				border-bottom: 2px solid #ddd;
+			}
+		}
+	}
+}
+.peak-item {
+	border-radius: 20px;
+	background: $white;
+	box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+	padding: 30px;
+	@include breakpoint(max-xl) {
+		padding: 20px;
+		img {
+			width: 40px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+}
+.thumb-unique {
+	width: 100%;
+	img {
+		width: 100%;
+	}
+}

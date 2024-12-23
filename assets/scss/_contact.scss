@@ -1,0 +1,69 @@
+//Contact
+.contact-forms {
+	border-radius: 20px;
+	background: #efefef;
+	box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+	padding: 40px 40px;
+	.nice-select,
+	input,
+	textarea {
+		width: 100%;
+		border-radius: 20px;
+		border: 2px solid #ddd;
+		padding: 10px 20px;
+		outline: none;
+		color: $pra;
+		background: transparent;
+	}
+	::placeholder {
+		color: $pra;
+	}
+	@include breakpoint(max-md) {
+		padding: 30px 20px;
+	}
+}
+
+.contact-info-area {
+	display: grid;
+	gap: 30px;
+	.contact-info {
+		border-radius: 20px;
+		background: $white;
+		box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+		padding: 30px 28px;
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		.icon {
+			width: 46px;
+			height: 46px;
+			background: $white;
+			border-radius: 50%;
+			border: 2px solid #ddd;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+//Contact
+
+//Map area
+.map-area {
+	margin-bottom: -140px;
+	iframe {
+		width: 100%;
+		height: 790px;
+	}
+	@include breakpoint(max-xxxl) {
+		iframe {
+			height: 500px;
+		}
+	}
+	@include breakpoint(max-xxxl) {
+		iframe {
+			height: 400px;
+		}
+	}
+}
+//Map area

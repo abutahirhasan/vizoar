@@ -1,0 +1,504 @@
+//Blog Nesw
+.news-section {
+	z-index: 1;
+	.shape-blog-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+	}
+}
+.news-single-items {
+	position: relative;
+	.news-image {
+		width: 100%;
+		margin-bottom: 30px;
+		img {
+			width: 100%;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+	}
+	.news-content {
+		.cmn-tag {
+			padding: 5px 20px 5px;
+			font-size: 16px;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+		h4 {
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 18px;
+			color: $pra;
+			margin-bottom: 24px;
+			line-height: 30px;
+		}
+	}
+	&.style1 {
+		padding: 0 30px 40px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		z-index: 1;
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			content: "";
+			height: 404px;
+			background: $blogbox;
+			z-index: -1;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+	}
+	//style2
+	&.style2 {
+		border-radius: 20px;
+		border: 1px solid #ddd;
+		background: $white;
+		box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+		transition: all 0.5s;
+		.news-content {
+			padding: 28px;
+			h4 {
+				margin-bottom: 30px;
+			}
+		}
+		&:hover {
+			transform: translateY(-8px);
+			.news-content {
+				h4 {
+					a {
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+	&:hover {
+		.news-content {
+			h4 {
+				a {
+					color: $p1-clr;
+				}
+			}
+		}
+	}
+	@include breakpoint(max-lg) {
+		&.style1 {
+			padding: 0 24px 20px;
+		}
+		.news-content {
+			.cmn-tag {
+				padding: 5px 10px 5px;
+				font-size: 16px;
+				margin-bottom: 18px;
+			}
+			h4 {
+				margin-bottom: 8px;
+			}
+			p {
+				font-size: 16px;
+				margin-bottom: 20px;
+				line-height: 28px;
+			}
+		}
+	}
+}
+//Blog Nesw
+
+//Blog Details
+.blog-details-left {
+	.blog-details-box {
+		border-radius: 20px;
+		overflow: hidden;
+		.badge {
+			border-radius: 20px 0px;
+			background: $p1-clr;
+			padding: 10px 12px;
+			font-size: 19px;
+			font-weight: 500;
+			color: $white;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.comment-tag {
+			border-radius: 20px 0px 0px 0px;
+			background: #ec191e;
+			display: flex;
+			gap: 18px;
+			padding: 8px 20px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			li {
+				button {
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					color: $white;
+					i {
+						color: $white;
+					}
+				}
+			}
+			@include breakpoint(max-sm) {
+				padding: 5px 14px;
+				gap: 0px 13px;
+				flex-wrap: wrap;
+				position: initial;
+				justify-content: center;
+				li {
+					button {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.thumb {
+			overflow: hidden;
+			img {
+				overflow: hidden;
+				transition: all 0.4s;
+			}
+		}
+		.content {
+			padding: 34px 40px 40px;
+			border: 2px solid #ddd;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			h2 {
+				a {
+					color: $black;
+				}
+			}
+			.common-btn {
+				background: transparent;
+				border-radius: 8px;
+				border: 1px solid $p2-clr;
+				color: $black;
+				font-weight: 600;
+				i {
+					color: $black;
+				}
+				&:hover {
+					border-color: $p3-clr;
+				}
+			}
+		}
+		@include breakpoint(max-sm) {
+			.badge {
+				padding: 10px 12px;
+				font-size: 14px;
+			}
+		}
+		&:hover {
+			.thumb {
+				overflow: hidden;
+				img {
+					transform: scale(1.05);
+				}
+			}
+			.content {
+				h2 {
+					a {
+						color: $p1-clr;
+					}
+				}
+			}
+		}
+		@include breakpoint(max-xs) {
+			.content {
+				padding: 24px 20px 20px;
+			}
+		}
+	}
+	display: grid;
+	gap: 60px;
+	@include breakpoint(max-xxl) {
+		gap: 40px;
+	}
+	@include breakpoint(max-xxl) {
+		gap: 20px;
+	}
+}
+.blog-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 60px;
+	li {
+		a {
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 20px;
+			border: 1px solid #ddd;
+			font-size: 20px;
+			font-weight: 500;
+			color: $black;
+			transition: all 0.4s;
+			&:hover {
+				border-color: $p1-clr;
+			}
+		}
+	}
+	@include breakpoint(max-xl) {
+		gap: 10px;
+		margin-top: 40px;
+		li {
+			a {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+.blog-details-right {
+	display: grid;
+	gap: 40px;
+	.details-common {
+		border-radius: 20px;
+		background: $white;
+		box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+		padding: 40px 40px;
+		h4 {
+			margin-bottom: 30px;
+		}
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			li {
+				a {
+					display: inline-block;
+					border: 1px solid $p1-clr;
+					padding: 5px 10px;
+					color: $pra;
+					font-size: 18px;
+					border-radius: 100px;
+					transition: all 0.4s;
+					&:hover {
+						background: $p1-clr;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	.search-box {
+		form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #ddd;
+			border-radius: 20px;
+			padding-right: 16px;
+			input {
+				width: 100%;
+				color: $pra;
+				padding: 10px 14px;
+				border: unset;
+				outline: none;
+				border-radius: 20px;
+			}
+			i {
+				color: $p1-clr;
+			}
+			::placeholder {
+				color: $pra;
+			}
+		}
+	}
+	.category-blog {
+		border: 1px solid #ddd;
+		background: #efefef;
+		.cates {
+			display: grid;
+			gap: 12px;
+			li {
+				a {
+					.seri {
+						border-radius: 50%;
+						border: 2px solid #ddd;
+						background: $white;
+						padding: 7px;
+						font-size: 18px;
+						color: $p1-clr;
+						width: 45px;
+						height: 45px;
+					}
+					&:hover {
+						color: $p1-clr;
+					}
+				}
+			}
+			.line {
+				width: 100%;
+				height: 1px;
+				background: $p1-clr;
+			}
+		}
+	}
+	.blog-latest {
+		display: grid;
+		gap: 28px;
+		.blog-latest-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: 20px;
+			border: 2px solid #ddd;
+			padding: 18px;
+			.thumb {
+				width: 75px;
+				height: 75px;
+				border-radius: 20px;
+				img {
+					border-radius: 20px;
+				}
+			}
+		}
+	}
+	@include breakpoint(max-xxl) {
+		gap: 40px;
+		.details-common {
+			padding: 20px 18px;
+		}
+		.blog-latest {
+			display: grid;
+			gap: 16px;
+			.blog-latest-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 11px;
+				.thumb {
+					width: 70px;
+					height: 70px;
+				}
+			}
+		}
+	}
+	@include breakpoint(max-xl) {
+		gap: 20px;
+	}
+}
+.lee-pragraph {
+	padding: 30px 30px;
+	border-radius: 20px;
+	background: #efefef;
+	@include breakpoint(max-xl){
+		padding: 20px 20px;
+	}
+}
+.tag-social-wrap {
+	border-top: 2px solid #ddd;
+	padding-top: 20px;
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3px;
+		li {
+			a {
+				display: inline-block;
+				border: 1px solid #ddd;
+				padding: 5px 10px;
+				color: $pra;
+				font-size: 18px;
+				border-radius: 100px;
+				transition: all 0.4s;
+				&:hover {
+					background: $p1-clr;
+					color: $white;
+					border-color: #ddd;
+				}
+			}
+		}
+	}
+	.social-wrapper {
+		gap: 10px;
+		a {
+			border-radius: 20px;
+			border: 2px solid #ddd;
+			background: $white;
+			i {
+				color: $p1-clr;
+				transition: all 0.4s;
+			}
+			&:hover {
+				background: $p1-clr;
+				border-color: $p1-clr;
+				i {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+.blog-details-reply-area {
+	gap: 30px;
+	.blog-reply-box {
+		border-radius: 20px;
+		border: 2px solid #ddd;
+		background: $white;
+		padding: 40px;
+		button {
+			padding: 10px 24px;
+			border-radius: 5px;
+			border: 1px solid #ddd;
+			font-size: 18px;
+			font-weight: 600;
+			color: #0c0c0e;
+			transition: all 0.4s;
+			&:hover {
+				background: $p1-clr;
+				border-color: $p1-clr;
+				color: $white;
+			}
+		}
+	}
+	@include breakpoint(max-sm) {
+		gap: 20px;
+		.blog-reply-box {
+			padding: 18px;
+			button {
+				padding: 7px 18px;
+			}
+		}
+	}
+}
+.blog-form{
+	background: transparent;
+	box-shadow: none;
+	input,
+	textarea{
+		background: $white;
+		border-width: 1px;
+	}
+	.nice-select{
+		border: 1px solid #ddd;
+		.list{
+			right: 0;
+			background: #fff;
+			li{
+				background-color: #dddddd56;
+				border: 0.5px solid #ddd;
+				padding: 7px 8px;
+				color: #000;
+			}
+		}
+		&::after{
+			right: 22px;
+			top: 22px;
+		}
+	}
+}
+//Blog Details
