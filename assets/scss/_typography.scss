@@ -2,11 +2,11 @@
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
-$heading-font: "Rubik", sans-serif;
-$sub-font: "Rubik", sans-serif;
-$body-font: "Open Sans", sans-serif;
+$heading-font: "Space Grotesk", sans-serif;
+$sub-font: "Space Grotesk", sans-serif;
+$body-font: "Inter", sans-serif;
 
 .heading-font {
 	font-family: $heading-font;
@@ -69,11 +69,11 @@ h6 {
 	padding: 0;
 	color: $header-color;
 	@include transition;
+	font-weight: 700;
 }
 
 h1 {
 	font-size: 60px;
-	font-weight: 500;
 	line-height: 72px;
 	@include breakpoint(max-xxl) {
 		font-size: 50px;
@@ -100,7 +100,6 @@ h1 {
 .fs-two,h2 {					
 	font-size: 50px;
 	line-height: 116%;
-	font-weight: 500;
 	@include breakpoint(max-xl) {
 		font-size: 42px;
 	}
@@ -113,7 +112,6 @@ h1 {
 }
 h3 {
 	font-size: 30px;
-	font-weight: 500;
 	line-height: 145%;
 	@include breakpoint(max-xxl) {
 		font-size: 28px;
@@ -128,7 +126,6 @@ h3 {
 
 h4 {
 	font-size: 25px;
-	font-weight: 500;
 	line-height: 130%;
 	@include breakpoint(max-xxl) {
 		font-size: 22px;
@@ -140,12 +137,10 @@ h4 {
 
 h5 {
 	font-size: 20px;
-	font-weight: 700;
 }
 
 h6 {
 	font-size: 18px;
-	font-weight: 500;
 	line-height: 145%;
 }
 

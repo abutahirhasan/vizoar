@@ -1,6 +1,4 @@
 /*------------------------------------------------------------------
-[Master Stylesheet]
-
 Project:        Vizoar
 Author URI:     https://themeforest.net/user/templateName
 Version:        1.1
@@ -9,23 +7,23 @@ Last change:    01/01/2025
 Assigned to:    Vizoar - Immigration and Visa Consulting HTML Template
 Primary use:    Visa 
 -------------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
 :root {
   --body: #fff;
-  --black: #0C0C0E;
+  --black: #090F1F;
   --white: #fff;
-  --p1-clr: rgba(32, 109, 255, 1);
-  --p2-clr: rgba(236, 25, 30, 1);
-  --p3-clr: rgba(255, 181, 37, 1);
+  --p1-clr: #83CD8F;
+  --p2-clr: #FED500;
+  --p3-clr: #B29AFF;
   --blogbox: #EFEFEF;
   --cmnbg: #EBF3F6;
   --n100-clr: rgba(235, 243, 246, 1);
   --n200-clr: rgba(221, 221, 221, 1);
   --n700-clr: rgba(36, 36, 38, 1);
   --n800-clr: rgba(49, 49, 49, 1);
-  --n900-clr: #0C0C0E;
+  --n900-clr: #090F1F;
   --theme: rgba(32, 109, 255, 1);
-  --pra: #313131;
+  --pra: #2C3347;
   --pra2: #DDD;
   --text: #313131;
   --cmnwhite: #CBCBCC;
@@ -146,15 +144,15 @@ Primary use:    Visa
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
 .heading-font {
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .sub-font {
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .body-font {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -162,7 +160,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 28px;
@@ -200,16 +198,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   margin: 0px;
   padding: 0;
   color: var(--header);
   transition: all 0.4s ease-in-out;
+  font-weight: 700;
 }
 
 h1 {
   font-size: 60px;
-  font-weight: 500;
   line-height: 72px;
 }
 @media (max-width: 1399px) {
@@ -246,7 +244,6 @@ h1 {
 .fs-two, h2 {
   font-size: 50px;
   line-height: 116%;
-  font-weight: 500;
 }
 @media (max-width: 1199px) {
   .fs-two, h2 {
@@ -266,7 +263,6 @@ h1 {
 
 h3 {
   font-size: 30px;
-  font-weight: 500;
   line-height: 145%;
 }
 @media (max-width: 1399px) {
@@ -287,7 +283,6 @@ h3 {
 
 h4 {
   font-size: 25px;
-  font-weight: 500;
   line-height: 130%;
 }
 @media (max-width: 1399px) {
@@ -303,12 +298,10 @@ h4 {
 
 h5 {
   font-size: 20px;
-  font-weight: 700;
 }
 
 h6 {
   font-size: 18px;
-  font-weight: 500;
   line-height: 145%;
 }
 
@@ -323,7 +316,7 @@ a {
 p {
   margin: 0px;
   transition: all 0.4s ease-in-out;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 25.6px;
 }
@@ -1519,7 +1512,7 @@ footer {
   color: var(--white);
   font-size: 25px;
   display: inline-block;
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 .footer-widgets-wrapper .single-footer-widget .footer-content p {
   margin-bottom: 30px;
@@ -1563,7 +1556,7 @@ footer {
 .footer-widgets-wrapper .single-footer-widget .list-area li a {
   color: var(--pra2);
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
   position: relative;
@@ -1593,7 +1586,7 @@ footer {
 .footer-widgets-wrapper .single-footer-widget .footer-info li a {
   color: var(--pra2);
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
   position: relative;
@@ -2010,7 +2003,7 @@ footer {
   color: var(--black);
   padding: 16px 0;
   text-align: left;
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   position: relative;
   text-transform: capitalize;
   transition: all 0.4s ease-in-out;
@@ -2207,6 +2200,12 @@ footer {
   width: 30px;
 }
 
+.header-hamburger-inner .line {
+  width: 1px;
+  height: 40px;
+  background: var(--black);
+}
+
 .header-1 {
   background: #ebf3f6;
   padding-top: 30px;
@@ -2214,7 +2213,7 @@ footer {
 .header-1 .mega-menu-wrapper {
   border-radius: 100px;
   background: var(--white);
-  padding: 0 12px 0 30px;
+  padding: 0 30px 0 30px;
 }
 .header-1 .header-main .header-left {
   display: flex;
@@ -2370,12 +2369,6 @@ footer {
   background: transparent;
 }
 
-@media (min-width: 1200px) {
-  .fix-area {
-    display: none !important;
-  }
-}
-
 .offcanvas__info {
   background: var(--cmnbg) none repeat scroll 0 0;
   border-left: 2px solid var(--p2-clr);
@@ -2500,25 +2493,21 @@ footer {
   color: var(--white);
 }
 
-@media (max-width: 1199px) {
-  .offcanvas__overlay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #151515;
-    z-index: 900;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-    right: 0;
-  }
+.offcanvas__overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #151515;
+  z-index: 900;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  right: 0;
 }
 
-@media (max-width: 1199px) {
-  .offcanvas__overlay.overlay-open {
-    opacity: 0.8;
-    visibility: visible;
-  }
+.offcanvas__overlay.overlay-open {
+  opacity: 0.8;
+  visibility: visible;
 }
 
 @media (max-width: 450px) {
@@ -4048,7 +4037,7 @@ footer {
   }
 }
 .preloader .animation-preloader .txt-loading {
-  font: bold 5em "Rubik", sans-serif, "Open Sans", sans-serif;
+  font: bold 5em "Space Grotesk", sans-serif, "Inter", sans-serif;
   text-align: center;
   user-select: none;
 }
@@ -4088,7 +4077,7 @@ footer {
   content: attr(data-text-preloader);
   left: 0;
   opacity: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   position: absolute;
   top: -3px;
   transform: rotateY(-90deg);
@@ -4858,7 +4847,7 @@ input.main-search-input::placeholder {
   font-weight: 500;
   color: var(--black);
   display: flex;
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
