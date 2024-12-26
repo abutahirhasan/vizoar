@@ -63,7 +63,7 @@
 }
 .box-style.first-box {
 	&::before {
-		background-color: $p3-clr;
+		background-color: $p2-clr;
 	}
 	&:hover {
 		i {
@@ -73,11 +73,6 @@
 			color: $n700-clr;
 		}
 	}
-}
-
-//Tilt 
-.btn-vivacity{
-
 }
 
 //cmn tag

@@ -1,24 +1,100 @@
 //Banner Style
 .banner-section {
-	padding: 140px 0;
+	padding: 190px 0 40px;
+	background: url(../../assets/img/banner/hero1-bg.png) no-repeat center center;
+	background-size: cover;
 	.hero-content-version1 {
 		.cmn-tag {
 			margin-bottom: 20px;
 		}
 		h1 {
-			margin-bottom: 20px;
+			margin-bottom: 24px;
+			font-size: 80px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 88px;
+			span {
+				font-size: 80px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 88px;
+			}
 		}
 		p {
 			font-size: 20px;
-			margin-bottom: 40px;
+			margin-bottom: 30px;
 			line-height: 30px;
 			max-width: 691px;
+		}
+		.hero-selector {
+			display: flex;
+			gap: 63px;
+			margin-bottom: 40px;
+			.selector-items {
+				.nice-select {
+					border: 1px solid $border-color;
+					padding: 11px 20px;
+					border-radius: 100px;
+					&::after {
+						right: 20px;
+						top: 22px;
+					}
+					.list {
+						right: 0;
+						background: $white;
+						li {
+							border-color: $border-color;
+							border-radius: 2px;
+							padding: 7px 14px;
+						}
+					}
+				}
+			}
 		}
 	}
 	.hero-thumb1 {
 		width: 100%;
+		max-width: 560px;
+		margin-left: auto;
+		position: relative;
 		img {
 			width: 100%;
+		}
+		.ratting-cmn-box {
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			max-width: 270px;
+		}
+		.flag1 {
+			position: absolute;
+			top: 90px;
+			left: 40px;
+			width: 60px;
+			display: block;
+			height: 60px;
+			object-fit: contain;
+			animation: updown 2s linear infinite;
+		}
+		.flag2 {
+			position: absolute;
+			top: 140px;
+			right: 40px;
+			width: 60px;
+			display: block;
+			height: 60px;
+			object-fit: contain;
+			animation: bounce-x 2s linear infinite;
+		}
+		.flag3 {
+			position: absolute;
+			right: 140px;
+			bottom: 80px;
+			width: 60px;
+			display: block;
+			height: 60px;
+			object-fit: contain;
+			animation: updown 2s linear infinite;
 		}
 	}
 	&.banner-style2 {
@@ -117,13 +193,18 @@
 		}
 	}
 	@include breakpoint(max-xxl) {
-		padding: 120px 0;
+		padding: 190px 0 0px;
 		.hero-content-version1 {
 			.cmn-tag {
 				margin-bottom: 18px;
 			}
 			h1 {
 				margin-bottom: 17px;
+			}
+			.hero-selector {
+				display: flex;
+				gap: 20px;
+				margin-bottom: 40px;
 			}
 			p {
 				font-size: 20px;
@@ -133,10 +214,61 @@
 		}
 	}
 	@include breakpoint(max-xl) {
-		padding: 100px 0;
+		padding: 170px 0 0px;
+		.hero-content-version1 {
+			.cmn-tag {
+				margin-bottom: 20px;
+			}
+			h1 {
+				margin-bottom: 24px;
+				font-size: 60px;
+				line-height: 68px;
+				span {
+					font-size: 60px;
+					line-height: 68px;
+				}
+			}
+			p {
+				font-size: 18px;
+				margin-bottom: 20px;
+				line-height: 30px;
+			}
+			.hero-selector {
+				display: flex;
+				gap: 16px;
+				margin-bottom: 36px;
+			}
+		}
 	}
 	@include breakpoint(max-lg) {
-		padding: 80px 0;
+		padding: 160px 0 0px;
+		.hero-content-version1 {
+			text-align: center;
+			.cmn-tag {
+				margin-bottom: 20px;
+			}
+			h1 {
+				margin-bottom: 24px;
+				font-size: 60px;
+				line-height: 68px;
+				span {
+					font-size: 60px;
+					line-height: 68px;
+				}
+			}
+			p {
+				font-size: 18px;
+				line-height: 30px;
+				margin: 0 auto 20px;
+			}
+			.hero-selector {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 16px;
+				margin-bottom: 28px;
+			}
+		}
 		.hero-thumb1 {
 			width: 100%;
 			max-width: 400px;
@@ -147,23 +279,87 @@
 		}
 	}
 	@include breakpoint(max-md) {
-		padding: 70px 0;
+		padding: 150px 0 0px;
 		.hero-content-version1 {
+			text-align: center;
 			.cmn-tag {
-				margin-bottom: 18px;
+				margin-bottom: 20px;
 			}
 			h1 {
-				margin-bottom: 14px;
+				margin-bottom: 24px;
+				font-size: 48px;
+				line-height: 60px;
+				span {
+					font-size: 48px;
+					line-height: 60px;
+				}
 			}
 			p {
-				font-size: 16px;
-				margin-bottom: 24px;
-				line-height: 28px;
+				font-size: 18px;
+				line-height: 30px;
+				margin: 0 auto 20px;
+			}
+			.hero-selector {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 16px;
+				margin-bottom: 28px;
+			}
+		}
+	}
+	@include breakpoint(max-sm) {
+		padding: 150px 0 0px;
+		.hero-content-version1 {
+			text-align: center;
+			.cmn-tag {
+				margin-bottom: 20px;
+			}
+			h1 {
+				margin-bottom: 17px;
+				font-size: 38px;
+				line-height: 48px;
+				span {
+					font-size: 38px;
+					line-height: 48px;
+				}
+			}
+			p {
+				font-size: 18px;
+				line-height: 30px;
+				margin: 0 auto 20px;
+			}
+			.hero-selector {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 16px;
+				margin-bottom: 28px;
 			}
 		}
 		.hero-thumb1 {
-			padding: 10px;
+			.ratting-cmn-box {
+				bottom: -0px;
+				left: 0;
+				max-width: 200px;
+				padding: 12px 19px;
+			}
+			.flag1,
+			.flag2,
+			.flag3{
+				width: 38px;
+				height: 38px;
+			}
 		}
+	}
+}
+.ratting-cmn-box {
+	background: $n100-clr;
+	border-radius: 20px;
+	padding: 20px 24px;
+	i {
+		font-size: 22px;
+		color: $p2-clr;
 	}
 }
 @keyframes cir190 {
