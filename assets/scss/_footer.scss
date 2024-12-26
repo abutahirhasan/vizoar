@@ -2,12 +2,6 @@
 	padding: 80px 0 80px;
 	position: relative;
 	z-index: 9;
-	display: flex;
-	justify-content: space-between;
-	gap: 30px;
-	.footer-widgets-pragraph {
-		max-width: 338px;
-	}
 	.single-footer-widget {
 		.widget-head {
 			margin-bottom: 28px;
@@ -22,22 +16,22 @@
 		.footer-content {
 			p {
 				margin-bottom: 30px;
-				font-size: 20px;
 				font-weight: 400;
-				line-height: 30px;
+				max-width: 322px;
 			}
 			.social-wrapper {
 				display: flex;
 				gap: 10px;
 				a {
-					background: $pra;
+					background: #151b2a;
 					i {
-						color: $white;
+						color: $p2-clr;
 						transition: all 0.4s;
 					}
 					&:hover {
+						background: $p1-clr;
 						i {
-							color: $p1-clr;
+							color: $white;
 						}
 					}
 				}
@@ -67,11 +61,10 @@
 		.list-area {
 			li {
 				&:not(:last-child) {
-					margin-bottom: 18px;
+					margin-bottom: 14px;
 				}
 				a {
 					color: $pra2;
-					font-size: 20px;
 					font-family: $body-font;
 					display: flex;
 					align-items: center;
@@ -163,22 +156,30 @@
 			}
 		}
 	}
-	@include breakpoint(max-lg) {
-		flex-wrap: wrap;
-		.single-footer-widget {
-			width: calc(96% / 2);
-		}
-		.widgets-line {
-			display: none;
-		}
-	}
 	@include breakpoint(max-md) {
 		padding: 65px 0 65px;
 	}
 	@media screen and (max-width: 540px) {
 		padding-left: 10px;
-		.single-footer-widget {
-			width: calc(100%);
+	}
+}
+.foot-address {
+	.icon {
+		border: 1px solid $p2-clr;
+		width: 40px;
+		height: 40px;
+		min-width: 40px;
+		transition: all 0.4s;
+	}
+	.cont {
+		span {
+			color: $white;
+			opacity: 0.8;
+		}
+	}
+	&:hover {
+		.icon {
+			background: $p2-clr;
 		}
 	}
 }
@@ -193,7 +194,7 @@
 
 		.footer-menu {
 			@include flex;
-			gap: 18px;
+			gap: 30px;
 			.line {
 				width: 1px;
 				height: 24px;
@@ -220,6 +221,13 @@
 				.line {
 					height: 18px;
 				}
+			}
+		}
+		@include breakpoint(max-sm) {
+			.footer-menu {
+				flex-wrap: wrap;
+				gap: 0px 14px;
+				justify-content: center;
 			}
 		}
 	}
@@ -255,7 +263,7 @@
 	@include breakpoint(max-md) {
 		.footer-space {
 			padding: 65px 0 70px !important;
-			.footer-widgets-wrapper{
+			.footer-widgets-wrapper {
 				padding: 0 0;
 			}
 		}
@@ -263,169 +271,56 @@
 }
 
 //Newsletter
-.newsletter-section {
-	z-index: 1;
-	&::before {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 114px;
-		content: "";
-		background: $black;
-		z-index: -1;
-	}
-	@include breakpoint(max-xl) {
-		&::before {
-			height: 75px;
-		}
-	}
-	@include breakpoint(max-lg) {
-		&::before {
-			height: 55px;
-		}
-	}
-	@include breakpoint(max-md) {
-		&::before {
-			height: 120px;
-		}
-	}
-}
 .newsletter-wrap {
-	background: $p1-clr;
-	padding: 64px 70px;
+	border: 1px solid $p2-clr;
+	padding: 60px 20px;
 	border-radius: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	.newsletter-content {
-		gap: 40px;
+	.newsletter-inner{
+		max-width: 640px;
+		margin: 0 auto;
 	}
 	form {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		border: 1px solid $white;
-		border-radius: 100px;
-		padding: 8px;
-		width: 550px;
+		justify-content: center;
 		input {
 			width: 100%;
 			height: 55px;
 			border: unset;
 			background: transparent;
 			color: $white;
-			padding-left: 10px;
+			padding: 11px 20px;
+			border: 1px solid rgb(255, 255, 255, 0.2);
+			border-radius: 100px;
+			width: 410px;
+			font-size: 14px;
 		}
 		::placeholder {
 			color: $white;
 		}
 		.subscribe {
 			border-radius: 100px;
-			background: $p3-clr;
+			background: $p2-clr;
 			text-wrap: nowrap;
 			font-size: 18px;
 			font-weight: 600;
-			padding: 16px 20px;
+			padding: 13px 24px;
 			color: $black;
-		}
-	}
-	@include breakpoint(max-xxl) {
-		padding: 40px 40px;
-		.newsletter-content {
-			gap: 18px;
-		}
-		form {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			border: 1px solid $white;
-			border-radius: 100px;
-			padding: 8px;
-			width: 450px;
-			.subscribe {
-				font-size: 16px;
-				font-weight: 500;
-				padding: 12px 20px;
+			transition: all 0.4s;
+			&:hover{
+				background: $p1-clr;
 			}
 		}
-	}
-	@include breakpoint(max-xl) {
-		padding: 40px 40px;
-		.newsletter-content {
-			gap: 18px;
-			img {
-				width: 65px;
-			}
-			h2 {
-				font-size: 32px;
-			}
-		}
-		form {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			border: 1px solid $white;
-			border-radius: 100px;
-			padding: 8px;
-			width: 450px;
-			.subscribe {
-				font-size: 16px;
-				font-weight: 500;
-				padding: 12px 20px;
-			}
-		}
-	}
-	@include breakpoint(max-lg) {
-		padding: 24px 20px;
-		.newsletter-content {
-			gap: 14px;
-			img {
-				width: 50px;
-			}
-			h2 {
-				font-size: 24px;
-			}
-		}
-		form {
-			padding: 4px;
-			width: 350px;
-			.subscribe {
-				font-weight: 500;
-			}
-		}
-	}
-	@include breakpoint(max-md) {
-		padding: 24px 20px;
-		flex-wrap: wrap;
-		justify-content: center;
-		.newsletter-content {
+		@include breakpoint(max-sm){
 			flex-wrap: wrap;
-			display: grid !important;
 			justify-content: center;
-			gap: 14px;
-			margin-bottom: 18px;
-			img {
-				width: 50px;
-				margin: 0 auto;
-			}
-			h2 {
-				font-size: 24px;
-				text-align: center;
-			}
 		}
-		form {
-			padding: 4px;
-			width: 350px;
-			input {
-				font-size: 14px;
-			}
-			.subscribe {
-				font-weight: 500;
-				font-size: 12px;
-				padding: 6px 14px;
-			}
-		}
+	}
+	@include breakpoint(max-xxl){
+		padding: 40px 20px;
+	}
+	@include breakpoint(max-xl){
+		padding: 30px 20px;
 	}
 }
 //Newsletter
