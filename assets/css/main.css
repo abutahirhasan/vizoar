@@ -41,7 +41,7 @@ Primary use:    Visa
 
 .common-btn {
   position: relative;
-  padding: 19px 30px;
+  padding: 16px 30px;
   line-height: 18px;
   transition: all 0.5s;
 }
@@ -127,6 +127,7 @@ Primary use:    Visa
 .read-more {
   font-size: 18px;
   font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
   color: var(--black);
   gap: 14px;
 }
@@ -267,12 +268,12 @@ h3 {
 }
 @media (max-width: 1399px) {
   h3 {
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 @media (max-width: 1199px) {
   h3 {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 @media (max-width: 575px) {
@@ -3623,12 +3624,13 @@ footer {
 }
 .news-single-items .news-image {
   width: 100%;
-  margin-bottom: 30px;
 }
 .news-single-items .news-image img {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+.news-single-items .news-content {
+  transition: all 0.5s;
+  padding: 26px 30px 30px;
 }
 .news-single-items .news-content .cmn-tag {
   padding: 5px 20px 5px;
@@ -3636,32 +3638,24 @@ footer {
   line-height: 30px;
   margin-bottom: 20px;
 }
-.news-single-items .news-content h4 {
-  margin-bottom: 10px;
+@media (max-width: 1399px) {
+  .news-single-items .news-content {
+    padding: 20px 20px 22px;
+  }
 }
-.news-single-items .news-content p {
-  font-size: 18px;
-  color: var(--text);
-  margin-bottom: 24px;
-  line-height: 30px;
+@media (max-width: 767px) {
+  .news-single-items .news-content {
+    padding: 20px 16px 22px;
+  }
 }
 .news-single-items.style1 {
-  padding: 0 30px 40px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  z-index: 1;
+  transform: translateY(-5px);
 }
-.news-single-items.style1::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  content: "";
-  height: 404px;
-  background: var(--blogbox);
-  z-index: -1;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.news-single-items.style1:hover .news-content {
+  border-bottom: 5px solid var(--p1-clr) !important;
+}
+.news-single-items.style1:hover .news-content h3 a {
+  color: var(--p1-clr);
 }
 .news-single-items.style2 {
   border-radius: 20px;
@@ -3684,24 +3678,6 @@ footer {
 }
 .news-single-items:hover .news-content h4 a {
   color: var(--p1-clr);
-}
-@media (max-width: 991px) {
-  .news-single-items.style1 {
-    padding: 0 24px 20px;
-  }
-  .news-single-items .news-content .cmn-tag {
-    padding: 5px 10px 5px;
-    font-size: 16px;
-    margin-bottom: 18px;
-  }
-  .news-single-items .news-content h4 {
-    margin-bottom: 8px;
-  }
-  .news-single-items .news-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 28px;
-  }
 }
 
 .blog-details-left {

@@ -12,46 +12,41 @@
 	position: relative;
 	.news-image {
 		width: 100%;
-		margin-bottom: 30px;
 		img {
 			width: 100%;
-			border-top-left-radius: 10px;
-			border-top-right-radius: 10px;
 		}
 	}
 	.news-content {
+		transition: all 0.5s;
+		padding: 26px 30px 30px;
 		.cmn-tag {
 			padding: 5px 20px 5px;
 			font-size: 16px;
 			line-height: 30px;
 			margin-bottom: 20px;
 		}
-		h4 {
-			margin-bottom: 10px;
+	}
+	@include breakpoint(max-xxl){
+		.news-content{
+			padding: 20px 20px 22px;
 		}
-		p {
-			font-size: 18px;
-			color: $pra;
-			margin-bottom: 24px;
-			line-height: 30px;
+	}
+	@include breakpoint(max-md){
+		.news-content{
+			padding: 20px 16px 22px;
 		}
 	}
 	&.style1 {
-		padding: 0 30px 40px;
-		border-bottom-left-radius: 20px;
-		border-bottom-right-radius: 20px;
-		z-index: 1;
-		&::before {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			content: "";
-			height: 404px;
-			background: $blogbox;
-			z-index: -1;
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
+		transform: translateY(-5px);
+		&:hover {
+			.news-content {
+				border-bottom: 5px solid $p1-clr !important;
+				h3 {
+					a {
+						color: $p1-clr;
+					}
+				}
+			}
 		}
 	}
 	//style2
@@ -84,26 +79,6 @@
 				a {
 					color: $p1-clr;
 				}
-			}
-		}
-	}
-	@include breakpoint(max-lg) {
-		&.style1 {
-			padding: 0 24px 20px;
-		}
-		.news-content {
-			.cmn-tag {
-				padding: 5px 10px 5px;
-				font-size: 16px;
-				margin-bottom: 18px;
-			}
-			h4 {
-				margin-bottom: 8px;
-			}
-			p {
-				font-size: 16px;
-				margin-bottom: 20px;
-				line-height: 28px;
 			}
 		}
 	}
@@ -395,7 +370,7 @@
 	padding: 30px 30px;
 	border-radius: 20px;
 	background: #efefef;
-	@include breakpoint(max-xl){
+	@include breakpoint(max-xl) {
 		padding: 20px 20px;
 	}
 }
@@ -475,27 +450,27 @@
 		}
 	}
 }
-.blog-form{
+.blog-form {
 	background: transparent;
 	box-shadow: none;
 	input,
-	textarea{
+	textarea {
 		background: $white;
 		border-width: 1px;
 	}
-	.nice-select{
+	.nice-select {
 		border: 1px solid #ddd;
-		.list{
+		.list {
 			right: 0;
 			background: #fff;
-			li{
+			li {
 				background-color: #dddddd56;
 				border: 0.5px solid #ddd;
 				padding: 7px 8px;
 				color: #000;
 			}
 		}
-		&::after{
+		&::after {
 			right: 22px;
 			top: 22px;
 		}

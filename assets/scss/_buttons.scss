@@ -3,7 +3,7 @@
 //Btn Theme
 .common-btn {
 	position: relative;
-	padding: 19px 30px;
+	padding: 16px 30px;
 	line-height: 18px;
 	transition: all 0.5s;
 	i {
@@ -91,6 +91,7 @@
 .read-more{
 	font-size: 18px;
 	font-weight: 600;
+	font-family: "Space Grotesk", sans-serif;
 	color: $black;
 	gap: 14px;
 	i{

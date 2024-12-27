@@ -114,10 +114,10 @@ h3 {
 	font-size: 30px;
 	line-height: 145%;
 	@include breakpoint(max-xxl) {
-		font-size: 28px;
+		font-size: 27px;
 	}
 	@include breakpoint(max-xl) {
-		font-size: 26px;
+		font-size: 22px;
 	}
 	@include breakpoint(max-sm) {
 		font-size: 22px;
