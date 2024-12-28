@@ -11,6 +11,8 @@
     --cmnbg: #EBF3F6;
     --n100-clr: #EEF6E7;
     --n200-clr: rgba(221, 221, 221, 1);
+    --n300-clr: #FFFADE;
+    --n400-clr: #F5E0FA;
     --n700-clr: rgba(36, 36, 38, 1);
     --n800-clr: rgba(49, 49, 49, 1);
     --n900-clr: #090F1F;
@@ -43,6 +45,8 @@ $cmnbg: var(--cmnbg);
 $blogbox: var(--blogbox);
 $n100-clr: var(--n100-clr);
 $n200-clr: var(--n200-clr);
+$n300-clr: var(--n300-clr);
+$n400-clr: var(--n400-clr);
 $n700-clr: var(--n700-clr);
 $n800-clr: var(--n800-clr);
 $pra: var(--text);

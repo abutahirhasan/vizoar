@@ -1,99 +1,45 @@
-//Category
-.category-wrappe {
-	display: grid;
-	position: relative;
-	z-index: 1;
-	grid-template-columns: repeat(4, 1fr);
-	&::before {
-		position: absolute;
-		top: 50px;
-		left: 0;
-		width: 80%;
-		height: 1px;
-		background: $pra2;
-		content: "";
-		z-index: -1;
-	}
-	.category-item {
-		.icon {
-			width: 90px;
-			height: 90px;
-			margin-bottom: 30px;
-			transition: all 0.5s;
-		}
-		&:hover {
-			.icon {
-				transform: scale(0.9);
-			}
-		}
-	}
-	@include breakpoint(max-lg) {
-		grid-template-columns: repeat(2, 1fr);
-		flex-wrap: wrap;
-		gap: 28px;
-		&::before {
-			display: none;
-		}
-		.category-item {
-			.icon {
-				width: 70px;
-				height: 70px;
-                margin-bottom: 15px;
-				img {
-					width: 40px;
-				}
-			}
-		}
-	}
-	@media screen and (max-width: 400px) {
-		grid-template-columns: repeat(1, 1fr);
-		gap: 28px;
-	}
-}
-//Category
-
-
-//working
-.working-items{
-	.cion{
-		border: 1px solid $p1-clr;
+//global access
+.access-item {
+	background: $white;
+	box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+	padding: 40px 40px;
+	transition: all 0.4s;
+	.icon {
+		width: 80px;
+		height: 80px;
 		border-radius: 50%;
-		width: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100px;
-		margin: 0 auto 20px;
 		transition: all 0.4s;
-		background: $white;
-		.work-badge{
-			position: absolute;
-			left: 0;
-			bottom: -5px;
-			font-size: 16px;
-			font-weight: 600;
-			background: #EBF3F6;
-			padding: 1px 10px;
-			border-radius: 999px;
+	}
+	.storke {
+		color: $pra;
+		-webkit-text-fill-color: white;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: $pra;
+		font-family: "Space Grotesk";
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 45px;
+		transition: all 0.4s;
+		transition: all 0.4s;
+	}
+	@include breakpoint(max-xxl){
+		padding: 30px 24px;
+	}
+	@include breakpoint(max-xl){
+		.icon{
+			width: 65px;
+			height: 65px;
 		}
 	}
 	&:hover{
-		.cion{
+		.icon{
 			background: $p1-clr;
-			img{
-				filter: brightness(25);
-			}
+		}
+		.storke{
+			-webkit-text-stroke-color: $p1-clr;
+			-webkit-text-fill-color: $p1-clr;
 		}
 	}
 }
-.workign-element{
-	position: absolute;
-	top: 240px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: -1;
-	@include breakpoint(max-xl){
-		top: 200px;
-	}
-}
-//working
+//global access

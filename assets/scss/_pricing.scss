@@ -5,84 +5,26 @@
 .pricing-items {
 	border-radius: 20px;
 	background: $white;
-	padding: 40px 30px;
+	padding: 40px 40px;
 	.pricing-head {
-		border-radius: 20px;
-		background: rgb(32, 109, 255, 0.1);
-		padding: 28px 30px;
-		margin-bottom: 42px;
+		.price-box {
+			width: 137px;
+			height: 137px;
+		}
+		border-bottom: 1px solid #151b2a;
+		padding-bottom: 18px;
 	}
 	.pricing-list {
 		gap: 16px;
 	}
-	&.premium {
-		background: $p1-clr;
-		padding-bottom: 60px;
-		.pricing-head {
-			background: $white;
-		}
-		.pricing-list {
-			li {
-				color: $white;
-			}
-		}
+	&.items1 {
+		background: $n300-clr;
 	}
-	&.pricing-items2 {
-		position: relative;
-		.pricing-heads {
-			border-bottom: 1px solid #ddd;
-			margin-bottom: 40px;
-			padding-bottom: 40px;
-		}
-		.pri-element {
-			position: absolute;
-			right: 30px;
-			top: 30px;
-			animation: cir360 15s linear infinite;
-		}
-		.populer-badge {
-			background: $p1-clr;
-			font-size: 18px;
-			color: $white;
-			writing-mode: vertical-lr;
-			padding: 20px 14px 40px;
-			position: absolute;
-			top: 0;
-			right: 30px;
-			clip-path: polygon(100% 0, 100% 100%, 49% 80%, 0 100%, 0 0);
-		}
-		@include breakpoint(max-xl) {
-			padding: 30px 20px;
-			.populer-badge {
-				font-size: 14px;
-				color: $white;
-				padding: 10px 6px 30px;
-				right: 10px;
-			}
-			.pricing-heads {
-				padding-bottom: 20px;
-				margin-bottom: 20px;
-			}
-			.pri-element {
-				width: 45px;
-				height: 45px;
-				img {
-					width: 45px;
-					height: 45px;
-					object-fit: contain;
-				}
-			}
-		}
-		&.actives {
-			background: #ffb525;
-			.common-btn {
-				&:hover {
-					background: $p1-clr !important;
-					z-index: 1;
-					color: $white;
-				}
-			}
-		}
+	&.items2 {
+		background: $n100-clr;
+	}
+	&.items3 {
+		background: $n400-clr;
 	}
 }
 @keyframes cir360 {
@@ -90,7 +32,36 @@
 		transform: rotate(360deg);
 	}
 }
-.pricing-gra{
-	background: #efefef;
+.pricing-tabbing {
+	border-radius: 100px;
+	overflow: hidden;
+	border: unset;
+	.nav-item {
+		border: unset;
+		.nav-link {
+			padding: 9px 28px;
+			font-size: 19px;
+			font-weight: 700;
+			background: $n100-clr;
+			border: unset;
+			transition: all 0.4s;
+			color: $black;
+			font-family: "Space Grotesk";
+			&.active {
+				background: $p1-clr;
+				color: $black;
+				border-radius: 0;
+			}
+			@include breakpoint(max-xxl) {
+				padding: 8px 24px;
+			}
+		}
+	}
+	@include breakpoint(max-sm) {
+		margin: 0 auto;
+		.nav-link {
+			margin: 0 auto;
+		}
+	}
 }
 //Pricing
