@@ -21,69 +21,102 @@
 	}
 }
 
-.faq-content {
-	.accordion-item {
-		border: 0;
-		background-color: $white;
-		box-shadow: $shadow;
-
+//Accordion
+.accordion-button:not(.collapsed) {
+	inset: 0 !important;
+	box-shadow: none !important;
+}
+.accordion-button:focus {
+	z-index: 3;
+	border-color: unset;
+	outline: 0;
+	box-shadow: none;
+}
+//Accordion
+.accordion-item {
+	border: unset;
+	.accordion-header {
+		.accordion-button {
+			padding: 4px 0 4px 24px;
+			background: transparent;
+			outline: none;
+			font-size: 24px;
+			font-weight: 700;
+			color: $black;
+			border-radius: 0;
+			border-left: 3px solid $border-color;
+			font-family: "Space Grotesk";
+			&::after {
+				content: "\2b";
+				font-family: "Font Awesome 6 Free";
+				background: transparent;
+				font-weight: 700;
+				transition: all 0.3s ease-in-out !important;
+				color: $p1-clr;
+				font-size: 28px;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $n100-clr;
+			}
+			&:not(.collapsed)::after {
+				content: "\2b";
+				font-family: "Font Awesome 6 Free";
+				background: transparent;
+				font-weight: 700;
+				transition: all 0.3s ease-in-out !important;
+				color: $black;
+				font-size: 28px;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $p1-clr;
+				transform: rotate(0);
+			}
+			&:not(.collapsed) {
+				border-color: $p1-clr;
+			}
+		}
+	}
+	.accordion-body {
+		padding: 0;
+		padding-left: 24px;
+		padding-top: 8px;
+		border-left: 3px solid $border-color;
+		p {
+			font-size: 16px;
+			color: $pra;
+		}
+	}
+	.accordion-collapse {
+		&.show {
+			.accordion-body {
+				border-color: $p1-clr;
+			}
+		}
+	}
+	@include breakpoint(max-xl) {
 		.accordion-header {
 			.accordion-button {
-				font-weight: 700;
-				color: $p2-clr;
-				letter-spacing: -0.2px;
-				border: 0;
-				border-radius: 0;
-				box-shadow: none;
-				background-color: $white;
-				padding: 25px 30px 0;
-				text-transform: capitalize;
+				padding: 4px 0 4px 14px;
 				font-size: 20px;
-				border: none;
-
+				font-weight: 700;
 				&::after {
-					// content: "\2b";
-					// font-family: "Font Awesome 6 Free";
-					// background: transparent;
-					font-weight: 500;
-					transition: all 0.3s ease-in-out !important;
-					background-image: url(../../assets/img/chevron-right.svg);
-					color: $theme-color-2;
-				}
-				&:not(.collapsed)::after {
-					// content: "\f068";
-					// font-family: "Font Awesome 6 Free";
-					// background: transparent;
-					background-image: url(../../assets/img/chevron-down.svg);
-					font-weight: 500;
-					color: $p2-clr;
-					transform: rotate(0);
-				}
-
-				&.collapsed {
-					background-color: transparent;
-					padding: 25px 30px;
-					color: $header-color;
+					font-size: 20px;
 				}
 			}
 		}
-
-		.accordion-collapse {
-			.accordion-body {
-				padding-right: 130px;
-				padding-left: 30px;
-				padding-top: 15px;
-				color: $text-color;
-				background-color: $white;
-				padding-bottom: 25px;
-
-				@include breakpoint(max-xxl) {
-					padding-right: 50px;
-				}
-
-				@include breakpoint(max-lg) {
-					padding-right: 30px;
-				}
+		.accordion-body {
+			padding-left: 14px;
+			padding-top: 6px;
+			p {
+				font-size: 15px;
 			}
 		}
 	}

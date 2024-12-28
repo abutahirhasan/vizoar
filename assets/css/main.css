@@ -44,6 +44,7 @@ Primary use:    Visa
   padding: 16px 30px;
   line-height: 18px;
   transition: all 0.5s;
+  font-family: "Space Grotesk", sans-serif;
 }
 .common-btn i {
   transition: all 0.5s;
@@ -1319,103 +1320,9 @@ footer {
   color: var(--p2-clr);
 }
 
-.faq-content .accordion-item {
-  border: 0;
-  background-color: var(--white);
-  box-shadow: var(--box-shadow);
-}
-.faq-content .accordion-item .accordion-header .accordion-button {
-  font-weight: 700;
-  color: var(--p2-clr);
-  letter-spacing: -0.2px;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background-color: var(--white);
-  padding: 25px 30px 0;
-  text-transform: capitalize;
-  font-size: 20px;
-  border: none;
-}
-.faq-content .accordion-item .accordion-header .accordion-button::after {
-  font-weight: 500;
-  transition: all 0.3s ease-in-out !important;
-  background-image: url(../../assets/img/chevron-right.svg);
-  color: var(--theme2);
-}
-.faq-content .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
-  background-image: url(../../assets/img/chevron-down.svg);
-  font-weight: 500;
-  color: var(--p2-clr);
-  transform: rotate(0);
-}
-.faq-content .accordion-item .accordion-header .accordion-button.collapsed {
-  background-color: transparent;
-  padding: 25px 30px;
-  color: var(--header);
-}
-.faq-content .accordion-item .accordion-collapse .accordion-body {
-  padding-right: 130px;
-  padding-left: 30px;
-  padding-top: 15px;
-  color: var(--text);
-  background-color: var(--white);
-  padding-bottom: 25px;
-}
-@media (max-width: 1399px) {
-  .faq-content .accordion-item .accordion-collapse .accordion-body {
-    padding-right: 50px;
-  }
-}
-@media (max-width: 991px) {
-  .faq-content .accordion-item .accordion-collapse .accordion-body {
-    padding-right: 30px;
-  }
-}
-
-.accordion-item {
-  border: unset;
-  overflow: hidden;
-  border-radius: 20px !important;
-  background: var(--blogbox) !important;
-  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
-  padding: 24px;
-}
-.accordion-item .accordion-header .accordion-button {
-  background: var(--blogbox) !important;
-  outline: none;
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--black);
-  padding: 0;
-}
-.accordion-item .accordion-body {
-  padding-top: 0;
-  padding: 0;
-}
-.accordion-item .accordion-body p {
-  max-width: 454px;
-  font-size: 16px;
-}
-@media (max-width: 450px) {
-  .accordion-item {
-    padding: 16px;
-  }
-  .accordion-item .accordion-header .accordion-button {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 27px;
-  }
-  .accordion-item .accordion-body p {
-    max-width: 454px;
-    font-size: 14px;
-  }
-}
-
 .accordion-button:not(.collapsed) {
   inset: 0 !important;
   box-shadow: none !important;
-  margin-bottom: 10px;
 }
 
 .accordion-button:focus {
@@ -1423,6 +1330,87 @@ footer {
   border-color: unset;
   outline: 0;
   box-shadow: none;
+}
+
+.accordion-item {
+  border: unset;
+}
+.accordion-item .accordion-header .accordion-button {
+  padding: 4px 0 4px 24px;
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  border-radius: 0;
+  border-left: 3px solid var(--border);
+  font-family: "Space Grotesk";
+}
+.accordion-item .accordion-header .accordion-button::after {
+  content: "+";
+  font-family: "Font Awesome 6 Free";
+  background: transparent;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out !important;
+  color: var(--p1-clr);
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--n100-clr);
+}
+.accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+  content: "+";
+  font-family: "Font Awesome 6 Free";
+  background: transparent;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out !important;
+  color: var(--black);
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--p1-clr);
+  transform: rotate(0);
+}
+.accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  border-color: var(--p1-clr);
+}
+.accordion-item .accordion-body {
+  padding: 0;
+  padding-left: 24px;
+  padding-top: 8px;
+  border-left: 3px solid var(--border);
+}
+.accordion-item .accordion-body p {
+  font-size: 16px;
+  color: var(--text);
+}
+.accordion-item .accordion-collapse.show .accordion-body {
+  border-color: var(--p1-clr);
+}
+@media (max-width: 1199px) {
+  .accordion-item .accordion-header .accordion-button {
+    padding: 4px 0 4px 14px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .accordion-item .accordion-header .accordion-button::after {
+    font-size: 20px;
+  }
+  .accordion-item .accordion-body {
+    padding-left: 14px;
+    padding-top: 6px;
+  }
+  .accordion-item .accordion-body p {
+    font-size: 15px;
+  }
 }
 
 .ranking-content .rangking-tag {
