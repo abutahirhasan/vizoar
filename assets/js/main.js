@@ -137,21 +137,38 @@ CSS TABLE OF CONTENTS
 			spaceBetween: 30,
 			speed: 1500,
 			loop: true,
-			autoplay: {
-				delay: 1000,
-				disableOnInteraction: false,
-			},
-			pagination: {
-				el: ".dot",
-				clickable: true,
-			},
 			navigation: {
 				nextEl: ".array-prev",
 				prevEl: ".array-next",
 			},
 			breakpoints: {
 				1199: {
-					slidesPerView: 2,
+					slidesPerView: 1,
+				},
+				767: {
+					slidesPerView: 1,
+				},
+				575: {
+					slidesPerView: 1,
+				},
+				0: {
+					slidesPerView: 1,
+				},
+			},
+		});
+
+		//>> Gateway Slider Start <<//
+		const gatewayWrapper = new Swiper(".gateway-wrapper", {
+			spaceBetween: 30,
+			speed: 1500,
+			loop: true,
+			navigation: {
+				nextEl: ".array-prev",
+				prevEl: ".array-next",
+			},
+			breakpoints: {
+				1199: {
+					slidesPerView: 3,
 				},
 				767: {
 					slidesPerView: 2,

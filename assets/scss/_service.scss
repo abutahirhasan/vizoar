@@ -1,0 +1,32 @@
+//gateway section
+.gateway-section{
+    .array-button{
+        button{
+            border: unset;
+            // background: rgba(37, 37, 37, 0.05);
+            background: #F4F1FB;
+            i{
+                color: $black;
+                font-size: 16px;
+            }
+            &:hover{
+                background: $p2-clr;
+            }
+        }
+    }
+}
+.gateway-items{
+    position: relative;
+    .content{
+        padding: 20px 28px 28px;
+        position: absolute;
+        bottom: 18px;
+        right: 18px;
+        max-width: 303px;
+        @include breakpoint(max-md){
+            padding: 14px 16px 18px;
+            max-width: 250px;
+        }
+    }
+}
+//gateway section

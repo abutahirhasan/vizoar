@@ -1,0 +1,66 @@
+//Team Member Section
+.team-member-wrapper {
+	display: grid;
+	gap: 24px;
+	.team-member-item {
+		background: $white;
+		padding: 40px 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+        position: relative;
+		.title-ara {
+			min-width: 260px;
+		}
+		.middle-pra {
+			max-width: 477px;
+		}
+		.social-wrapper {
+			a {
+				width: 38px;
+				height: 38px;
+				background: $n100-clr;
+				i {
+					color: $black;
+				}
+				&:hover {
+					background: $p1-clr;
+				}
+			}
+		}
+        .team-ele{
+            position: absolute;
+            right: 280px;
+            top: 50%;
+            transform: translateY(-50%) rotate(20deg) scale(0);
+        }   transition: all 0.5s;
+        &:hover{
+            background: $p1-clr;
+            .team-ele{
+                transform: translateY(-50%) rotate(20deg) scale(1);
+            }
+            .title-ara{
+                h3,a,p{
+                    color: $white;
+                }
+            }
+            .middle-pra{
+                color: $white;
+            }
+        }
+		@include breakpoint(max-lg) {
+			padding: 30px 20px;
+			flex-wrap: wrap;
+			display: grid;
+            text-align: center;
+			.middle-pra {
+				max-width: 100%;
+			}
+			.title-ara {
+				min-width: initial;
+			}
+		}
+	}
+}
+//Team Member Section

@@ -2,77 +2,71 @@
 .testimonial-items {
 	border-radius: 20px;
 	background: #fff;
-	padding: 40px;
+	padding: 36px 40px 106px;
+	position: relative;
+	box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+	margin: 24px;
 	p {
 		line-height: 30px;
 	}
-	&.style2 {
-		box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
-        margin-bottom: 30px;
-		.ratting-area {
-			border-top: 1px solid #ddd;
-			padding-top: 30px;
-			margin-top: 40px;
-		}
-		@include breakpoint(max-lg) {
-			padding: 30px 24px;
+	.testi-quote {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	@include breakpoint(max-md) {
+		padding: 28px 22px 100px;
+		margin: 0;
+		border: 1px solid $border-color;
+	}
+}
+.testimonial-thumb1 {
+	@include breakpoint(max-lg) {
+		width: 100%;
+		img {
+			width: 100%;
 		}
 	}
 }
 .testimonial-section {
 	position: relative;
 	z-index: 1;
-	.array-button {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		width: 100%;
-		top: 50%;
-		transform: translateY(-50%);
+	.swiper-arrow-area1 {
 		position: absolute;
 		z-index: 9;
-		.array-prev {
-			margin-left: -75px;
-		}
-		.array-next {
-			margin-right: -50px;
-		}
-	}
-	&.section-style2 {
-        margin-bottom: -40px;
-		&::before {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			content: "";
-			background: $white;
-			height: 330px;
-			z-index: -1;
-		}
-	}
-	@include breakpoint(max-xxxl) {
-		.array-button {
-			margin-top: 20px;
-			justify-content: center;
-			top: initial;
-			position: initial;
-			.array-prev {
-				margin-left: 00px;
-				width: 40px;
-				height: 40px;
-				line-height: 40px;
-				i {
-					font-size: 17px;
+		right: 220px;
+		bottom: 60px;
+		button {
+			svg {
+				path {
+					fill: #e6e7e9;
+					stroke: #e6e7e9;
+					transition: all 0.4s;
+				}
+				transition: all 0.4s;
+			}
+			&:hover {
+				svg {
+					path {
+						fill: $p1-clr;
+						stroke: $p1-clr;
+					}
 				}
 			}
-			.array-next {
-				margin-right: 0px;
-				width: 40px;
-				height: 40px;
-				line-height: 40px;
-				i {
-					font-size: 17px;
+		}
+	}
+	@include breakpoint(max-md) {
+		.swiper-arrow-area1 {
+			position: absolute;
+			z-index: 9;
+			right: initial;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 30px;
+			button {
+				svg {
+					width: 50px;
 				}
 			}
 		}
