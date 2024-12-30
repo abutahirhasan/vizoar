@@ -458,10 +458,45 @@
 	}
 	&.header-style2 {
 		padding-top: 0;
+		.container{
+			max-width: 1350px;
+			margin: 0 auto;
+		}
 		.mega-menu-wrapper {
-			@include breakpoint(xxl) {
-				border-radius: 0px 0px 40px 40px;
-				padding: 14px 30px 14px 30px;
+			border-radius: 0;
+			.desktop-search{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border: 1px solid $border-color;
+				width: 260px;
+				padding-right:1px;
+				border-radius: 100px;
+				input{
+					width: 100%;
+					padding: 6px 10px 6px 22px;
+					color: $pra;
+					font-size: 14px;
+					outline: none;
+					border: unset;
+					background: transparent;
+				}
+				::placeholder{
+					color: $pra;
+				}
+				i{
+					margin-right: 24px;
+					color: $p3-clr;
+				}
+				@include breakpoint(max-xl){
+					display: none;
+				}
+			}
+			.header-main{
+				padding: 18px 0;
+				@include breakpoint(max-xl){
+					padding: 20px 0;
+				}
 			}
 		}
 	}
